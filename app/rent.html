@@ -67,6 +67,7 @@
         <div class="container">
             <div class="about-restaurant__content">
                 <div class="info-block about-restaurant__content__info-block">
+                    <img src="img/mic.png" alt="" class="about-restaurant__content__info-block__decoration">
                     <div class="info-block__carousel">
                         <div class="info-block__carousel__item">
                             <img src="img/info-block-photo.png" alt="">
@@ -246,7 +247,7 @@
 
 
 
-    <section class="rate">
+    <section class="rate rent-page__rate">
         <div class="container">
             <h2 class="section-title">
                 Тарифы
@@ -286,58 +287,42 @@
                     </span>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        кофе брейк
-                    </p>
-
-                    <span>
-                        От 1500 руб.
-                    </span>
-                </div>
-
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        аренда ресторана
-                    </p>
-
-                    <span>
-                        От 1500 руб.
-                    </span>
-                </div>
             </div>
         </div>
     </section>
 
 
-    <div class="block-form">
-        <div class="block-form__content">
-            <h2 class="section-title">
-                Забронировать ресторан
-            </h2>
+    <section class="rate-page__block-form">
+        <div class="container">
+            <img src="img/pen.png" alt="" class="rate-page__block-form__decoration">
+            <div class="block-form">
+                <div class="block-form__content">
+                    <h2 class="section-title">
+                        Расчет стоимости аренды
+                    </h2>
 
-            <form>
-                <div class="block-form__content__field">
-                    <input type="text" placeholder="Введите Ваше имя">
+                    <form>
+                        <div class="block-form__content__field">
+                            <input type="text" placeholder="Введите Ваше имя">
+                        </div>
+
+                        <div class="block-form__content__field">
+                            <input type="text" placeholder="Введите номер телефона">
+                        </div>
+
+                        <button type="submit" class="book__content__form__content__fields__button">
+                            забронировать стол
+                        </button>
+                    </form>
+
+                    <p class="book__content__form__content__privacy-policy">
+                        Нажимая на кнопку, вы соглашаетесь
+                        <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
+                    </p>
                 </div>
-
-                <div class="block-form__content__field">
-                    <input type="text" placeholder="Введите номер телефона">
-                </div>
-
-                <button type="submit" class="book__content__form__content__fields__button">
-                    забронировать стол
-                </button>
-            </form>
-
-            <p class="book__content__form__content__privacy-policy">
-                Нажимая на кнопку, вы соглашаетесь
-                <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
-            </p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <section class="gallery">
         <div class="container">
@@ -387,19 +372,22 @@
 
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer__block">
+        <div class="container footer__main-content">
+            <div class="footer__block footer__block-address">
                 <h4 class="font-forum">
                     Адрес:
                 </h4>
 
                 <p>
-                    ул. Грузинский Вал, <span style="display: inline-block;">дом 11, стр.3, (1мин. от метро
-                    Белорусская)</span>
+                    ул. Грузинский Вал,
+                    <span style="display: inline-block;">
+                        дом 11, стр.3,
+                        <span style="display: inline-block;">(1мин. от метро Белорусская)</span>
+                    </span>
                 </p>
             </div>
 
-            <div class="footer__block">
+            <div class="footer__block footer__block-time">
                 <h4 class="font-forum">
                     Время работы:
                 </h4>
@@ -409,7 +397,7 @@
                 </p>
             </div>
 
-            <div class="footer__block">
+            <div class="footer__block footer__block-socials">
                 <h4 class="font-forum">
                     Мы в социальных сетях:
                 </h4>
@@ -433,7 +421,7 @@
                 </div>
             </div>
 
-            <div class="footer__block">
+            <div class="footer__block footer__block-contacts">
                 <div class="footer__block__phones">
                     <a href="+79999999999" class="font-forum">
                         +7 495 229 42 33
@@ -447,6 +435,46 @@
                 <button class="footer__block__order" type="button">
                     забронировать столик
                 </button>
+            </div>
+
+            <div class="footer__block footer__block-menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            аренда ресторана
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            аренда зала
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            коворкинг
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            доставка
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            меню
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
