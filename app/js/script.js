@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+    $('.header__burger').click(function() {
+        $('.mob-menu-wrap').addClass("active");
+        $('body').css('overflow', 'hidden');
+    });
+
+    $('.mob-menu__close').click(function() {
+        $('.mob-menu-wrap').removeClass("active");
+        $('body').css('overflow', 'visible');
+    });
+
+    $('.header__action__order-call, .footer__block__order').click(function() {
+        $('#basicForm').addClass('active');
+        $('body').css('overflow', 'hidden');
+    });
+
+    $('.popup__body__close').click(function() {
+        $(this).closest('.popup').removeClass('active');
+        $('body').css('overflow', 'visible');
+    });
+
+
     $('.book__content__form__content__order').jScrollPane();
 
     $('.gallery__content').lightGallery();
@@ -31,17 +52,22 @@ $(document).ready(function() {
         $(this).toggleClass('clicked');
         if ($(this).hasClass('clicked')) {
             placesArray.push($(this).attr('data-place'));
-            $(placesArray).each(function(i, el) {
-                $('#ordered').text(function() {
-                    return el;
-                });
-            });
+            document.getElementById('ordered').innerHTML += `
+                <span data-choosen='${placesArray[placesArray.length - 1]}'>${placesArray[placesArray.length - 1]},</span>
+                `;
+
+            document.querySelector('.book__content__form__content__order .jspPane').innerHTML += `
+                <p>Столик №${placesArray[placesArray.length - 1]}</p>
+             `;
+
+            $('.book__content__form__content__order').jScrollPane();
+
         } else {
             placesArray = $.grep(placesArray, function(value) {
                 return value != place;
             });
+            document.getElementById('ordered').querySelector(`span[data-choosen='${place}']`).remove();
         }
-        console.log(placesArray);
     });
 
 });
