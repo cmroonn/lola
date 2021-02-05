@@ -208,6 +208,9 @@ a {
   border: none;
   -webkit-animation: upDown 5s ease 0s infinite;
   animation: upDown 5s ease 0s infinite; }
+  @media (min-width: 1110px) {
+    .main-screen__scroll-down {
+      visibility: hidden; } }
 
 @-webkit-keyframes upDown {
   0% {
@@ -2866,3 +2869,26 @@ p.popup-ordering__form__total {
   -o-transition: .2s;
   transition: .2s;
   stroke: #555; }
+
+.main-screen__scroll-down-desk {
+  display: none; }
+  @media (min-width: 1110px) {
+    .main-screen__scroll-down-desk {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      bottom: 100px;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+      .main-screen__scroll-down-desk svg {
+        margin-right: 10px; }
+      .main-screen__scroll-down-desk p {
+        font-size: 12px; } }

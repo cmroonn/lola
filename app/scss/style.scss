@@ -246,6 +246,10 @@ a {
   background: none;
   border: none;
   animation: upDown 5s ease 0s infinite;
+
+  @media (min-width: 1110px) {
+    visibility: hidden;
+  }
 }
 
 @keyframes upDown {
@@ -3303,5 +3307,28 @@ p.popup-ordering__form__total {
         }
       }
     }
+  }
+}
+
+
+.main-screen__scroll-down-desk {
+  display: none;
+
+  @media (min-width: 1110px) {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    transform: rotate(-90deg);
+
+    svg {
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
   }
 }
