@@ -581,6 +581,7 @@ a {
 .book__content__form__content {
   border: 1px solid rgba(204, 204, 204, 0.6);
   padding: 30px 25px;
+  height: 100%;
 
   .section-title {
     text-align: center;
@@ -602,6 +603,7 @@ a {
 .book__content__form__content__order {
   overflow-y: auto;
   max-height: 130px;
+  min-height: 130px;
   outline: none;
   padding: 10px 0;
   margin-bottom: 12px;
@@ -655,6 +657,10 @@ a {
 
     p {
       font-size: 14px;
+
+      span {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -875,6 +881,12 @@ a {
             font-family: "Forum";
             font-size: 14px;
             text-transform: uppercase;
+            transition: .2s;
+
+            &:hover {
+              opacity: .6;
+              transition: .2s;
+            }
           }
         }
       }
@@ -937,6 +949,11 @@ a {
 
     width: 250px;
     margin: 15px 0 0;
+  }
+
+  &:hover {
+    background: #fff;
+    color: #252525;
   }
 
 }
@@ -2244,6 +2261,12 @@ a {
         font-family: "Forum";
         text-transform: uppercase;
         font-size: 14px;
+        transition: .2s;
+
+        &:hover {
+          opacity: .6;
+          transition: .2s;
+        }
       }
     }
   }
@@ -2423,6 +2446,7 @@ a {
 
 .restaurant-schema__place {
   transition: .2s;
+  cursor: pointer;
   &.hovered {
     fill: #B6E57B;
     transition: .2s;

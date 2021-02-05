@@ -57,7 +57,7 @@ $(document).ready(function() {
                 `;
 
             document.querySelector('.book__content__form__content__order .jspPane').innerHTML += `
-                <p>Столик №${placesArray[placesArray.length - 1]}</p>
+                <p data-choosen="${place}">Столик №${placesArray[placesArray.length - 1]}</p>
              `;
 
             $('.book__content__form__content__order').jScrollPane();
@@ -67,6 +67,8 @@ $(document).ready(function() {
                 return value != place;
             });
             document.getElementById('ordered').querySelector(`span[data-choosen='${place}']`).remove();
+            document.querySelector(`.book__content__form__content__order p[data-choosen="${place}"`).remove();
+            $('.book__content__form__content__order').jScrollPane();
         }
     });
 

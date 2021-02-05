@@ -511,7 +511,8 @@ a {
 
 .book__content__form__content {
   border: 1px solid rgba(204, 204, 204, 0.6);
-  padding: 30px 25px; }
+  padding: 30px 25px;
+  height: 100%; }
   .book__content__form__content .section-title {
     text-align: center;
     margin-bottom: 15px; }
@@ -527,6 +528,7 @@ a {
 .book__content__form__content__order {
   overflow-y: auto;
   max-height: 130px;
+  min-height: 130px;
   outline: none;
   padding: 10px 0;
   margin-bottom: 12px; }
@@ -572,7 +574,9 @@ a {
     .book__content__form__content__total span {
       font-size: 20px; }
     .book__content__form__content__total p {
-      font-size: 14px; } }
+      font-size: 14px; }
+      .book__content__form__content__total p span {
+        font-size: 14px; } }
 
 .book__content__form__content__checkbox {
   display: block;
@@ -747,7 +751,15 @@ a {
         .footer__main-content .footer__block-menu ul li a {
           font-family: "Forum";
           font-size: 14px;
-          text-transform: uppercase; } }
+          text-transform: uppercase;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s; }
+          .footer__main-content .footer__block-menu ul li a:hover {
+            opacity: .6;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; } }
 
 .footer__block-menu {
   display: none; }
@@ -798,6 +810,9 @@ a {
       font-size: 14px;
       width: 250px;
       margin: 15px 0 0; } }
+  .footer__block__order:hover {
+    background: #fff;
+    color: #252525; }
 
 .footer__divider {
   width: 150%;
@@ -1958,7 +1973,15 @@ a {
         .header__menu li a {
           font-family: "Forum";
           text-transform: uppercase;
-          font-size: 14px; } }
+          font-size: 14px;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s; }
+          .header__menu li a:hover {
+            opacity: .6;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; } }
 
 .rent-info-2__content__info-block__decoration {
   display: none; }
@@ -2109,7 +2132,8 @@ a {
 .restaurant-schema__place {
   -webkit-transition: .2s;
   -o-transition: .2s;
-  transition: .2s; }
+  transition: .2s;
+  cursor: pointer; }
   .restaurant-schema__place.hovered {
     fill: #B6E57B;
     -webkit-transition: .2s;
