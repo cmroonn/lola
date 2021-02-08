@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" integrity="sha512-qVGZo16kFUROlnuSNN+j0oxMYHIRBjpnsjXl6Iz/pNR9nTU9WISq5eGODr1Qn0Fz8lzZPxu9i4RVaeof8xVZRA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css" integrity="sha512-gk6oCFFexhboh5r/6fov3zqTCA2plJ+uIoUx941tQSFg6TNYahuvh1esZVV0kkK+i5Kl74jPmNJTTaHAovWIhw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -97,8 +98,8 @@
                     Быстрый заказ:
                 </p>
 
-                <form>
-                    <input type="text" placeholder="Введите номер телефона">
+                <form class="form-name-and-phone">
+                    <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
                     <button type="submit">
                         заказать
                     </button>
@@ -116,6 +117,16 @@
                 <path opacity="0.4" d="M39 1L20 17L1 1" stroke="white"/>
             </svg>
         </button>
+
+        <div class="main-screen__scroll-down-desk">
+            <svg width="64" height="10" viewBox="0 0 64 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M63.25 4.75L0.75 4.75M0.75 4.75L4.75 8.75M0.75 4.75L4.75 0.75" stroke="white"/>
+            </svg>
+
+            <p>
+                Листайте вниз
+            </p>
+        </div>
     </section>
 
 
@@ -441,6 +452,9 @@
                     <div class="delivery__catalog__prods__item">
                         <div class="delivery__catalog__prods__item__preview">
                             <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
                         </div>
 
                         <div class="delivery__catalog__prods__item__content">
@@ -479,7 +493,7 @@
                                         </svg>
                                     </button>
 
-                                    <input type="text" value="2">
+                                    <input type="text" value="2" maxlength="99">
 
                                     <button type="button">
                                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -496,43 +510,7 @@
                     <div class="delivery__catalog__prods__item">
                         <div class="delivery__catalog__prods__item__preview">
                             <img src="img/pizza-2.png" alt="">
-                        </div>
-
-                        <div class="delivery__catalog__prods__item__content">
-                            <div class="delivery__catalog__prods__item__content__row">
-                                <div class="delivery__catalog__prods__item__content">
-                                    <h5 class="font-forum">
-                                        маргарита
-                                    </h5>
-
-                                    <p>
-                                        30 см | 450 г
-                                    </p>
-                                </div>
-
-                                <button type="button" class="delivery__catalog__prods__item__content__informer">
-                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
-                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-
-                            <div class="delivery__catalog__prods__item__content__row">
-                                <div class="delivery__catalog__prods__item__content__price">
-                                    600 руб.
-                                </div>
-
-                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
-                                    Заказать
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="delivery__catalog__prods__item">
-                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
                             <img src="img/pizza-2.png" alt="">
                         </div>
 
@@ -572,6 +550,8 @@
                     <div class="delivery__catalog__prods__item">
                         <div class="delivery__catalog__prods__item__preview">
                             <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
                         </div>
 
                         <div class="delivery__catalog__prods__item__content">
@@ -609,6 +589,329 @@
 
                     <div class="delivery__catalog__prods__item">
                         <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
+                        </div>
+
+                        <div class="delivery__catalog__prods__item__content">
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content">
+                                    <h5 class="font-forum">
+                                        маргарита
+                                    </h5>
+
+                                    <p>
+                                        30 см | 450 г
+                                    </p>
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__informer">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.2" cx="15" cy="15" r="14.5" stroke="#252525"/>
+                                        <path opacity="0.3" d="M15 15V22" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="0.3" d="M15 9V10" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="delivery__catalog__prods__item__content__row">
+                                <div class="delivery__catalog__prods__item__content__price">
+                                    600 руб.
+                                </div>
+
+                                <button type="button" class="delivery__catalog__prods__item__content__order-btn">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery__catalog__prods__item">
+                        <div class="delivery__catalog__prods__item__preview">
+                            <img src="img/pizza-2.png" alt="">
+                            <img src="img/pizza-2.png" alt="">
                             <img src="img/pizza-2.png" alt="">
                         </div>
 
@@ -818,13 +1121,13 @@
                         Заказать по телефону
                     </h2>
 
-                    <form>
+                    <form class="delivery-page__block-form__form">
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите Ваше имя">
+                            <input type="text" placeholder="Введите Ваше имя" name="name">
                         </div>
 
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите номер телефона">
+                            <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
                         </div>
 
                         <button type="submit" class="book__content__form__content__fields__button">
@@ -881,6 +1184,9 @@
                 проложить маршрут
             </a>
         </div>
+
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7456213c8380194ee6e567ea1cca11ef3a6bfa61a21867c6ceb58c7be491d9d7&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
     </section>
 
 
@@ -1008,11 +1314,123 @@
     </footer>
 </main>
 
+<!-- success order popup -->
+<div class="popup popup-informer" id="informer">
+    <div class="popup-informer__icon">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+                <circle cx="25" cy="23" r="15" fill="white"/>
+                <circle cx="25" cy="23" r="14.5" stroke="#E6E6E6"/>
+            </g>
+            <path opacity="0.3" d="M25 23V30" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity="0.3" d="M25 17V18" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+                <filter id="filter0_d" x="0" y="0" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                    <feOffset dy="2"/>
+                    <feGaussianBlur stdDeviation="5"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <div class="popup__body">
+        <button type="button" class="popup__body__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <h2 class="text-center font-forum text-uppercase">
+            пицца lola
+        </h2>
+
+        <div class="popup-informer__block">
+            <h3 class="text-center font-forum text-uppercase">
+                состав:
+            </h3>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+        </div>
+
+        <div class="popup-informer__block">
+            <h3 class="text-center font-forum text-uppercase">
+                Всякое:
+            </h3>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js" integrity="sha512-EqofP+sBEn/OWcyAINAUnewpwC0e9zc0GvyiVeE3qeHYxqtdCcNocVBUiZhGWbPFWGTWxfJ60CcOK6HQ6G7uiw==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" integrity="sha512-gDBgGPXSeC2hx1W3S1CfSHbAValtLI8OArTGf0UVX7Fwb9Ak7HUE3LK9UEZxKGYVrIe0CJUVZDk9B2dIPwJ6VQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

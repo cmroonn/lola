@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" integrity="sha512-qVGZo16kFUROlnuSNN+j0oxMYHIRBjpnsjXl6Iz/pNR9nTU9WISq5eGODr1Qn0Fz8lzZPxu9i4RVaeof8xVZRA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css" integrity="sha512-gk6oCFFexhboh5r/6fov3zqTCA2plJ+uIoUx941tQSFg6TNYahuvh1esZVV0kkK+i5Kl74jPmNJTTaHAovWIhw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,11 +25,53 @@
                         <img src="img/logo.png" alt="LOLA Pizza&Bar">
                     </a>
 
+                    <ul class="header__menu">
+                        <li>
+                            <a href="#">
+                                главная
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                доставка
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                аренда зала
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                аренда ресторана
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                коворкинг
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                контакты
+                            </a>
+                        </li>
+                    </ul>
+
                     <div class="header__action">
                         <div class="header__action__phone">
                             <a href="#">
                                 8 800 000 00 00
                             </a>
+
+                            <button type="button" class="header__action__order-call">
+                                Заказать звонок
+                            </button>
                         </div>
 
                         <button type="button" class="header__burger">
@@ -60,6 +103,16 @@
                 <path opacity="0.4" d="M39 1L20 17L1 1" stroke="white"/>
             </svg>
         </button>
+
+        <div class="main-screen__scroll-down-desk">
+            <svg width="64" height="10" viewBox="0 0 64 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M63.25 4.75L0.75 4.75M0.75 4.75L4.75 8.75M0.75 4.75L4.75 0.75" stroke="white"/>
+            </svg>
+
+            <p>
+                Листайте вниз
+            </p>
+        </div>
     </section>
 
     <section class="book coworking-book">
@@ -302,7 +355,7 @@
 
                 </div>
 
-                <div class="book__content__form">
+                <form class="form-name-and-phone book__content__form">
                     <div class="book__content__form__content">
                         <h2 class="section-title">
                             Забронировать:
@@ -327,17 +380,22 @@
                             <span>Забронировать весь ресторан</span>
                         </label>
 
+                        <button type="button" id="clearAll">
+                            Очистить выбранное
+                        </button>
+
                         <div class="book__content__form__content__fields">
                             <p class="book__content__form__content__fields__heading">
                                 Чтобы забронировать выбранные места, пожалуйста, заполните форму:
                             </p>
 
                             <div class="book__content__form__content__fields__field">
-                                <input type="text" placeholder="Введите Ваше имя">
+                                <input type="text" placeholder="Введите Ваше имя" name="name">
                             </div>
 
                             <div class="book__content__form__content__fields__field">
-                                <input type="text" placeholder="Введите номер телефона">
+                                <input type="tel" placeholder="Введите номер телефона" name="phone"
+                                       class="masked-input">
                             </div>
 
                             <button type="submit" class="book__content__form__content__fields__button">
@@ -350,7 +408,7 @@
                             <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
                         </p>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -364,19 +422,23 @@
                         <div class="info-block__carousel__item">
                             <img src="img/info-block-photo.png" alt="">
                         </div>
+
+                        <div class="info-block__carousel__item">
+                            <img src="img/info-block-photo.png" alt="">
+                        </div>
                     </div>
 
                     <div class="info-block__content">
-                        <h3 class="font-forum">
-                            коворкинг
-                        </h3>
+                        <div class="info-block__content-wrap">
+                            <h3 class="font-forum">
+                                коворкинг
+                            </h3>
 
-                        <p class="fw-300">
-                            Расположенный в эпицентре быстроразвивающегося транспортного, жилого и бизнес-кластера в старом районе Москвы, LOLA Pizza&Bar предлагает для комфортной работы и камерных мероприятий коворкинг-мансарду на 20 человек, расположенную на третьем этаже пространства. Здесь есть собственная кофе-станция, библиотека с актуальной бизнес и lifestyle-литературой и лаунж-зона. Попасть сюда можно по разовому дневному доступу или по абонементу
-                            Расположенный в эпицентре быстроразвивающегося транспортного, жилого и бизнес-кластера в старом районе Москвы, LOLA Pizza&Bar предлагает для комфортной работы и камерных мероприятий коворкинг-мансарду на 20 человек, расположенную на третьем этаже
-                        </p>
-
-
+                            <p class="fw-300">
+                                Расположенный в эпицентре быстроразвивающегося транспортного, жилого и бизнес-кластера в старом районе Москвы, LOLA Pizza&Bar предлагает для комфортной работы и камерных мероприятий коворкинг-мансарду на 20 человек, расположенную на третьем этаже пространства. Здесь есть собственная кофе-станция, библиотека с актуальной бизнес и lifestyle-литературой и лаунж-зона. Попасть сюда можно по разовому дневному доступу или по абонементу
+                                Расположенный в эпицентре быстроразвивающегося транспортного, жилого и бизнес-кластера в старом районе Москвы, LOLA Pizza&Bar предлагает для комфортной работы и камерных мероприятий коворкинг-мансарду на 20 человек, расположенную на третьем этаже
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -476,66 +538,81 @@
 
 
 
-    <section class="rate">
+    <section class="rate coworking-rate">
         <div class="container">
             <h2 class="section-title">
                 заголовок в одну строку
             </h2>
 
             <div class="rate__content">
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
+                <div class="rate__content__item coworking-rate__content__item-1" style="background-image:
+                linear-gradient(180deg,
+                rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        от 20 человек
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            до 40 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            Для комфортной работы
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
+                <div class="rate__content__item coworking-rate__content__item-2" style="background-image:
+                linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        до 65 человек
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            до 65 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 1500 руб.
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
+                <div class="rate__content__item coworking-rate__content__item-3" style="background-image:
+                linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        от 150 человек
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            до 65 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 1500 руб.
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
+                <div class="rate__content__item coworking-rate__content__item-4" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        кофе брейк
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            до 65 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 1500 руб.
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
+                <div class="rate__content__item coworking-rate__content__item-5" style="background-image:
+                linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        аренда ресторана
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            до 65 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 1500 руб.
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -624,13 +701,16 @@
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.8">
                                 <path d="M41.0337 48.6486H34.7567C34.5775 48.6486 34.4057 48.5774 34.2789 48.4507C34.1522 48.324 34.081 48.1521 34.081 47.9729C34.081 47.7937 34.1522 47.6219 34.2789 47.4952C34.4057 47.3685 34.5775 47.2973 34.7567 47.2973H41.0337C41.2971 47.2969 41.5495 47.1921 41.7357 47.006C41.9219 46.8198 42.0266 46.5673 42.027 46.304V24.581C42.0268 24.3177 41.9221 24.0651 41.7359 23.8789C41.5496 23.6927 41.2971 23.588 41.0337 23.5878H8.96618C8.70281 23.588 8.45028 23.6927 8.26405 23.8789C8.07781 24.0651 7.97311 24.3177 7.97293 24.581V46.304C7.97329 46.5673 8.07805 46.8198 8.26424 47.006C8.45043 47.1921 8.70286 47.2969 8.96618 47.2973H36.5946C36.7738 47.2973 36.9456 47.3685 37.0723 47.4952C37.199 47.6219 37.2702 47.7937 37.2702 47.9729C37.2702 48.1521 37.199 48.324 37.0723 48.4507C36.9456 48.5774 36.7738 48.6486 36.5946 48.6486H8.96618C8.34457 48.6479 7.74863 48.4007 7.30909 47.9611C6.86955 47.5216 6.6223 46.9256 6.62158 46.304V24.581C6.6223 23.9594 6.86955 23.3635 7.30909 22.924C7.74863 22.4844 8.34457 22.2372 8.96618 22.2365H41.0337C41.6554 22.2372 42.2513 22.4844 42.6908 22.924C43.1304 23.3635 43.3776 23.9594 43.3783 24.581V46.304C43.3776 46.9256 43.1304 47.5216 42.6908 47.9611C42.2513 48.4007 41.6554 48.6479 41.0337 48.6486Z" fill="#252525"/>
+                                <path d="M37.3716 23.5871H12.6283C12.4491 23.5871 12.2773 23.5159 12.1505 23.3892C12.0238 23.2625 11.9526 23.0906 11.9526 22.9114V14.3979C11.9526 10.9375 13.3273 7.61889 15.7741 5.17205C18.2209 2.72521 21.5396 1.35059 24.9999 1.35059C28.4603 1.35059 31.7789 2.72521 34.2258 5.17205C36.6726 7.61889 38.0472 10.9375 38.0472 14.3979V22.9114C38.0472 23.0906 37.976 23.2625 37.8493 23.3892C37.7226 23.5159 37.5508 23.5871 37.3716 23.5871ZM13.304 22.2357H36.6959V14.3979C36.6959 11.2959 35.4636 8.32102 33.2702 6.1276C31.0768 3.93419 28.1019 2.70194 24.9999 2.70194C21.898 2.70194 18.9231 3.93419 16.7297 6.1276C14.5362 8.32102 13.304 11.2959 13.304 14.3979V22.2357Z" fill="#252525"/>
+                                <path d="M33.3176 23.5872H16.6825C16.5033 23.5872 16.3314 23.516 16.2047 23.3893C16.078 23.2625 16.0068 23.0907 16.0068 22.9115V14.3986C16.0068 12.0135 16.9543 9.72602 18.6409 8.03946C20.3275 6.3529 22.6149 5.4054 25.0001 5.4054C27.3852 5.4054 29.6727 6.3529 31.3593 8.03946C33.0458 9.72602 33.9933 12.0135 33.9933 14.3986V22.9122C33.9931 23.0912 33.9219 23.2629 33.7952 23.3895C33.6685 23.5161 33.4967 23.5872 33.3176 23.5872ZM17.3582 22.2358H32.642V14.3986C32.642 12.3719 31.8368 10.4281 30.4037 8.99501C28.9706 7.56187 27.0268 6.75675 25.0001 6.75675C22.9733 6.75675 21.0296 7.56187 19.5964 8.99501C18.1633 10.4281 17.3582 12.3719 17.3582 14.3986V22.2358Z" fill="#252525"/>
                                 <path d="M28.4596 40.8171H21.5407C21.4306 40.8171 21.3221 40.7903 21.2248 40.7388C21.1274 40.6874 21.0441 40.6129 20.9821 40.5219C20.9201 40.4309 20.8812 40.3262 20.869 40.2168C20.8567 40.1073 20.8713 39.9966 20.9116 39.8941L22.0278 37.0563C21.2831 36.2931 20.8658 35.2692 20.865 34.2029C20.865 33.1062 21.3007 32.0544 22.0762 31.2789C22.8516 30.5034 23.9034 30.0677 25.0001 30.0677C26.0968 30.0677 27.1486 30.5034 27.9241 31.2789C28.6996 32.0544 29.1353 33.1062 29.1353 34.2029C29.1344 35.2691 28.7174 36.2928 27.9731 37.0563L29.0893 39.8941C29.1296 39.9966 29.1443 40.1073 29.132 40.2168C29.1197 40.3262 29.0809 40.4309 29.0189 40.5219C28.9569 40.6129 28.8735 40.6874 28.7762 40.7388C28.6788 40.7903 28.5704 40.8171 28.4603 40.8171H28.4596ZM22.5326 39.4657H27.465L26.5434 37.1205C26.4911 36.9871 26.4825 36.8405 26.5189 36.7019C26.5554 36.5633 26.6349 36.4399 26.7461 36.3495C27.1945 35.9879 27.5197 35.4961 27.6769 34.9419C27.8341 34.3877 27.8155 33.7984 27.6238 33.2552C27.432 32.712 27.0766 32.2417 26.6063 31.909C26.136 31.5763 25.5742 31.3976 24.9981 31.3976C24.4221 31.3976 23.8602 31.5763 23.3899 31.909C22.9197 32.2417 22.5642 32.712 22.3724 33.2552C22.1807 33.7984 22.1621 34.3877 22.3193 34.9419C22.4765 35.4961 22.8017 35.9879 23.2501 36.3495C23.3613 36.4399 23.4409 36.5633 23.4773 36.7019C23.5137 36.8405 23.5052 36.9871 23.4528 37.1205L22.5326 39.4657Z" fill="#252525"/>
-                                <path d="M12.5 13.5V22.5H16.5V13.5C16.5 10.5 19.8 6 25 6C30.2 6 33.5 10.5 33.5 13.5V15C33.5 16 34 17 35.5 17C37 17 37.5 16 37.5 15V13.5C37.5 8.5 34.2 2 25 2C15.8 2 12.5 8.5 12.5 13.5Z" stroke="#252525" stroke-width="1.5"/>
                             </g>
                         </svg>
 
+
                         <h4 class="font-forum">
-                            Нефиксированное рабочее время
+                            фиксированное
+                            рабочее место
                         </h4>
 
                         <div class="co-working-rate__content__item__content__row">
@@ -653,7 +733,7 @@
                             </p>
 
                             <p>
-                                1200 руб
+                                1300 руб
                             </p>
                         </div>
 
@@ -665,7 +745,7 @@
                             </p>
 
                             <p>
-                                18 000 руб
+                                24 000 руб
                             </p>
                         </div>
 
@@ -677,7 +757,31 @@
                             </p>
 
                             <p>
-                                45 000 руб
+                                65 000 руб
+                            </p>
+                        </div>
+
+                        <div class="co-working-rate__content__item__content__row">
+                            <p>
+                                <span>
+                                    6 месяцев
+                                </span>
+                            </p>
+
+                            <p>
+                                98 000 руб
+                            </p>
+                        </div>
+
+                        <div class="co-working-rate__content__item__content__row">
+                            <p>
+                                <span>
+                                    1 год
+                                </span>
+                            </p>
+
+                            <p>
+                                165 000 руб
                             </p>
                         </div>
 
@@ -692,26 +796,20 @@
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.8">
                                 <path d="M41.0337 48.6486H34.7567C34.5775 48.6486 34.4057 48.5774 34.2789 48.4507C34.1522 48.324 34.081 48.1521 34.081 47.9729C34.081 47.7937 34.1522 47.6219 34.2789 47.4952C34.4057 47.3685 34.5775 47.2973 34.7567 47.2973H41.0337C41.2971 47.2969 41.5495 47.1921 41.7357 47.006C41.9219 46.8198 42.0266 46.5673 42.027 46.304V24.581C42.0268 24.3177 41.9221 24.0651 41.7359 23.8789C41.5496 23.6927 41.2971 23.588 41.0337 23.5878H8.96618C8.70281 23.588 8.45028 23.6927 8.26405 23.8789C8.07781 24.0651 7.97311 24.3177 7.97293 24.581V46.304C7.97329 46.5673 8.07805 46.8198 8.26424 47.006C8.45043 47.1921 8.70286 47.2969 8.96618 47.2973H36.5946C36.7738 47.2973 36.9456 47.3685 37.0723 47.4952C37.199 47.6219 37.2702 47.7937 37.2702 47.9729C37.2702 48.1521 37.199 48.324 37.0723 48.4507C36.9456 48.5774 36.7738 48.6486 36.5946 48.6486H8.96618C8.34457 48.6479 7.74863 48.4007 7.30909 47.9611C6.86955 47.5216 6.6223 46.9256 6.62158 46.304V24.581C6.6223 23.9594 6.86955 23.3635 7.30909 22.924C7.74863 22.4844 8.34457 22.2372 8.96618 22.2365H41.0337C41.6554 22.2372 42.2513 22.4844 42.6908 22.924C43.1304 23.3635 43.3776 23.9594 43.3783 24.581V46.304C43.3776 46.9256 43.1304 47.5216 42.6908 47.9611C42.2513 48.4007 41.6554 48.6479 41.0337 48.6486Z" fill="#252525"/>
-                                <path d="M28.4596 40.8171H21.5407C21.4306 40.8171 21.3221 40.7903 21.2248 40.7388C21.1274 40.6874 21.0441 40.6129 20.9821 40.5219C20.9201 40.4309 20.8812 40.3262 20.869 40.2168C20.8567 40.1073 20.8713 39.9966 20.9116 39.8941L22.0278 37.0563C21.2831 36.2931 20.8658 35.2692 20.865 34.2029C20.865 33.1062 21.3007 32.0544 22.0762 31.2789C22.8516 30.5034 23.9034 30.0677 25.0001 30.0677C26.0968 30.0677 27.1486 30.5034 27.9241 31.2789C28.6996 32.0544 29.1353 33.1062 29.1353 34.2029C29.1344 35.2691 28.7174 36.2928 27.9731 37.0563L29.0893 39.8941C29.1296 39.9966 29.1443 40.1073 29.132 40.2168C29.1197 40.3262 29.0809 40.4309 29.0189 40.5219C28.9569 40.6129 28.8735 40.6874 28.7762 40.7388C28.6788 40.7903 28.5704 40.8171 28.4603 40.8171H28.4596ZM22.5326 39.4657H27.465L26.5434 37.1205C26.4911 36.9871 26.4825 36.8405 26.5189 36.7019C26.5554 36.5633 26.6349 36.4399 26.7461 36.3495C27.1945 35.9879 27.5197 35.4961 27.6769 34.9419C27.8341 34.3877 27.8155 33.7984 27.6238 33.2552C27.432 32.712 27.0766 32.2417 26.6063 31.909C26.136 31.5763 25.5742 31.3976 24.9981 31.3976C24.4221 31.3976 23.8602 31.5763 23.3899 31.909C22.9197 32.2417 22.5642 32.712 22.3724 33.2552C22.1807 33.7984 22.1621 34.3877 22.3193 34.9419C22.4765 35.4961 22.8017 35.9879 23.2501 36.3495C23.3613 36.4399 23.4409 36.5633 23.4773 36.7019C23.5137 36.8405 23.5052 36.9871 23.4528 37.1205L22.5326 39.4657Z" fill="#252525"/>
-                                <path d="M12.5 13.5V22.5H16.5V13.5C16.5 10.5 19.8 6 25 6C30.2 6 33.5 10.5 33.5 13.5V15C33.5 16 34 17 35.5 17C37 17 37.5 16 37.5 15V13.5C37.5 8.5 34.2 2 25 2C15.8 2 12.5 8.5 12.5 13.5Z" stroke="#252525" stroke-width="1.5"/>
+                                <path d="M37.3716 23.5871H12.6283C12.4491 23.5871 12.2773 23.5159 12.1505 23.3892C12.0238 23.2625 11.9526 23.0906 11.9526 22.9114V14.3979C11.9526 10.9375 13.3273 7.61889 15.7741 5.17205C18.2209 2.72521 21.5396 1.35059 24.9999 1.35059C28.4603 1.35059 31.7789 2.72521 34.2258 5.17205C36.6726 7.61889 38.0472 10.9375 38.0472 14.3979V22.9114C38.0472 23.0906 37.976 23.2625 37.8493 23.3892C37.7226 23.5159 37.5508 23.5871 37.3716 23.5871ZM13.304 22.2357H36.6959V14.3979C36.6959 11.2959 35.4636 8.32102 33.2702 6.1276C31.0768 3.93419 28.1019 2.70194 24.9999 2.70194C21.898 2.70194 18.9231 3.93419 16.7297 6.1276C14.5362 8.32102 13.304 11.2959 13.304 14.3979V22.2357Z" fill="#252525"/>
+                                <path d="M33.3176 23.5872H16.6825C16.5033 23.5872 16.3314 23.516 16.2047 23.3893C16.078 23.2625 16.0068 23.0907 16.0068 22.9115V14.3986C16.0068 12.0135 16.9543 9.72602 18.6409 8.03946C20.3275 6.3529 22.6149 5.4054 25.0001 5.4054C27.3852 5.4054 29.6727 6.3529 31.3593 8.03946C33.0458 9.72602 33.9933 12.0135 33.9933 14.3986V22.9122C33.9931 23.0912 33.9219 23.2629 33.7952 23.3895C33.6685 23.5161 33.4967 23.5872 33.3176 23.5872ZM17.3582 22.2358H32.642V14.3986C32.642 12.3719 31.8368 10.4281 30.4037 8.99501C28.9706 7.56187 27.0268 6.75675 25.0001 6.75675C22.9733 6.75675 21.0296 7.56187 19.5964 8.99501C18.1633 10.4281 17.3582 12.3719 17.3582 14.3986V22.2358Z" fill="#252525"/>
+                                <path d="M20.9999 29V33.5M20.9999 42V33.5M23 29V32C23 32.5 23 33.5 20.9999 33.5M20.9999 33.5C18.9998 33.5 19 32.5 19 32V29" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29 36C28 36 27 35 27 33C27 31 28 29 29 29C30 29 31 31 31 33C31 35 30 36 29 36ZM29 36V42" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
                             </g>
                         </svg>
 
+
                         <h4 class="font-forum">
-                            Нефиксированное рабочее время
+                            фиксированное
+                            место + обед
                         </h4>
 
-                        <div class="co-working-rate__content__item__content__row">
-                            <p>
-                                <span>
-                                    1 час
-                                </span>
-                            </p>
 
-                            <p>
-                                200 руб
-                            </p>
-                        </div>
 
                         <div class="co-working-rate__content__item__content__row">
                             <p>
@@ -721,7 +819,7 @@
                             </p>
 
                             <p>
-                                1200 руб
+                                1300 руб
                             </p>
                         </div>
 
@@ -733,7 +831,7 @@
                             </p>
 
                             <p>
-                                18 000 руб
+                                24 000 руб
                             </p>
                         </div>
 
@@ -745,7 +843,31 @@
                             </p>
 
                             <p>
-                                45 000 руб
+                                65 000 руб
+                            </p>
+                        </div>
+
+                        <div class="co-working-rate__content__item__content__row">
+                            <p>
+                                <span>
+                                    6 месяцев
+                                </span>
+                            </p>
+
+                            <p>
+                                98 000 руб
+                            </p>
+                        </div>
+
+                        <div class="co-working-rate__content__item__content__row">
+                            <p>
+                                <span>
+                                    1 год
+                                </span>
+                            </p>
+
+                            <p>
+                                165 000 руб
                             </p>
                         </div>
 
@@ -820,6 +942,9 @@
                 проложить маршрут
             </a>
         </div>
+
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7456213c8380194ee6e567ea1cca11ef3a6bfa61a21867c6ceb58c7be491d9d7&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
     </section>
 
 
@@ -947,12 +1072,108 @@
     </footer>
 </main>
 
+<!-- basic form popup -->
+<div class="popup" id="basicForm">
+    <div class="popup__body">
+        <button type="button" class="popup__body__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <h2 class="text-center font-forum text-uppercase">
+            чтобы оставить заявкУ, пожалуйста, заполните форму
+        </h2>
+
+
+        <form>
+            <div class="block-form__content__field">
+                <input type="text" placeholder="Введите Ваше имя">
+            </div>
+
+            <div class="block-form__content__field">
+                <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
+            </div>
+
+            <button type="submit" class="book__content__form__content__fields__button">
+                оставить заявку
+            </button>
+
+            <p class="book__content__form__content__privacy-policy">
+                Нажимая на кнопку, вы соглашаетесь
+                <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
+            </p>
+        </form>
+    </div>
+</div>
+
+<div class="mob-menu-wrap">
+    <div class="mob-menu">
+        <button type="button" class="mob-menu__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <a href="/" class="mob-menu__logo">
+            <img src="img/logo-black.svg" alt="">
+        </a>
+
+
+        <div class="mob-menu__phone">
+            <a href="#">
+                8 800 000 00 00
+            </a>
+        </div>
+
+        <ul class="mob-menu__list">
+            <li>
+                <a href="#">
+                    Главная
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Доставка
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    аренда зала
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    аренда ресторана
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    коворкинг
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    контакты
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js" integrity="sha512-EqofP+sBEn/OWcyAINAUnewpwC0e9zc0GvyiVeE3qeHYxqtdCcNocVBUiZhGWbPFWGTWxfJ60CcOK6HQ6G7uiw==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" integrity="sha512-gDBgGPXSeC2hx1W3S1CfSHbAValtLI8OArTGf0UVX7Fwb9Ak7HUE3LK9UEZxKGYVrIe0CJUVZDk9B2dIPwJ6VQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

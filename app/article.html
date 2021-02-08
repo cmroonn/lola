@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" integrity="sha512-qVGZo16kFUROlnuSNN+j0oxMYHIRBjpnsjXl6Iz/pNR9nTU9WISq5eGODr1Qn0Fz8lzZPxu9i4RVaeof8xVZRA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css" integrity="sha512-gk6oCFFexhboh5r/6fov3zqTCA2plJ+uIoUx941tQSFg6TNYahuvh1esZVV0kkK+i5Kl74jPmNJTTaHAovWIhw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,11 +24,53 @@
                     <img src="img/logo-black.png" alt="LOLA Pizza&Bar" class="header__logo__black">
                 </a>
 
+                <ul class="header__menu">
+                    <li>
+                        <a href="#">
+                            главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            доставка
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            аренда зала
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            аренда ресторана
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            коворкинг
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            контакты
+                        </a>
+                    </li>
+                </ul>
+
                 <div class="header__action">
                     <div class="header__action__phone">
                         <a href="#">
                             8 800 000 00 00
                         </a>
+
+                        <button type="button" class="header__action__order-call">
+                            Заказать звонок
+                        </button>
                     </div>
 
                     <button type="button" class="header__burger">
@@ -47,7 +90,28 @@
     <section class="article">
         <div class="container">
             <div class="article__content">
+                <div class="breadcrumbs article-page__breadcrumbs">
+                    <div class="container">
+                        <ul class="breadcrumbs__nav breadcrumbs__nav-white">
+                            <li>
+                                <a href="/">
+                                    Главная
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/">
+                                    Статья
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="article__content__carousel">
+                    <div class="article__content__carousel__item">
+                        <img src="img/pic.png" alt="">
+                    </div>
+
                     <div class="article__content__carousel__item">
                         <img src="img/pic.png" alt="">
                     </div>
@@ -113,48 +177,64 @@
             </h2>
 
             <div class="rate__content">
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        Коворкинг
-                    </p>
+                <div class="rate__content__item">
+                    <div class="rate__content__item__bg">
+                        <img src="img/info-block-photo.png" alt="">
+                    </div>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            Аренда ресторана
+                        </p>
 
-                    <span>
-                        Подзаголовок
-                    </span>
+                        <span>
+                            Подзаголовок
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        Коворкинг
-                    </p>
+                <div class="rate__content__item">
+                    <div class="rate__content__item__bg">
+                        <img src="img/info-block-photo.png" alt="">
+                    </div>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            Аренда зала
+                        </p>
 
-                    <span>
-                        Подзаголовок
-                    </span>
+                        <span>
+                            Подзаголовок
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        Коворкинг
-                    </p>
+                <div class="rate__content__item">
+                    <div class="rate__content__item__bg">
+                        <img src="img/info-block-photo.png" alt="">
+                    </div>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            Коворкинг
+                        </p>
 
-                    <span>
-                        Подзаголовок
-                    </span>
+                        <span>
+                            Подзаголовок
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        Коворкинг
-                    </p>
+                <div class="rate__content__item">
+                    <div class="rate__content__item__bg">
+                        <img src="img/pic5.png" alt="">
+                    </div>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            Доставка
+                        </p>
 
-                    <span>
-                        Подзаголовок
-                    </span>
+                        <span>
+                            Подзаголовок
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,13 +249,13 @@
                         Забронировать столик
                     </h2>
 
-                    <form>
+                    <form class="form-name-and-phone">
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите Ваше имя">
+                            <input type="text" placeholder="Введите Ваше имя" name="name">
                         </div>
 
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите номер телефона">
+                            <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
                         </div>
 
                         <button type="submit" class="book__content__form__content__fields__button">
@@ -193,20 +273,34 @@
     </section>
 
 
-    <footer class="footer">
+    <section class="map">
         <div class="container">
-            <div class="footer__block">
+            <a href="#" class="map__button" target="_blank">
+                проложить маршрут
+            </a>
+        </div>
+
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7456213c8380194ee6e567ea1cca11ef3a6bfa61a21867c6ceb58c7be491d9d7&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__main-content">
+            <div class="footer__block footer__block-address">
                 <h4 class="font-forum">
                     Адрес:
                 </h4>
 
                 <p>
-                    ул. Грузинский Вал, <span style="display: inline-block;">дом 11, стр.3, (1мин. от метро
-                    Белорусская)</span>
+                    ул. Грузинский Вал,
+                    <span style="display: inline-block;">
+                        дом 11, стр.3,
+                        <span style="display: inline-block;">(1мин. от метро Белорусская)</span>
+                    </span>
                 </p>
             </div>
 
-            <div class="footer__block">
+            <div class="footer__block footer__block-time">
                 <h4 class="font-forum">
                     Время работы:
                 </h4>
@@ -216,7 +310,7 @@
                 </p>
             </div>
 
-            <div class="footer__block">
+            <div class="footer__block footer__block-socials">
                 <h4 class="font-forum">
                     Мы в социальных сетях:
                 </h4>
@@ -240,7 +334,7 @@
                 </div>
             </div>
 
-            <div class="footer__block">
+            <div class="footer__block footer__block-contacts">
                 <div class="footer__block__phones">
                     <a href="+79999999999" class="font-forum">
                         +7 495 229 42 33
@@ -254,6 +348,46 @@
                 <button class="footer__block__order" type="button">
                     забронировать столик
                 </button>
+            </div>
+
+            <div class="footer__block footer__block-menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            аренда ресторана
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            аренда зала
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            коворкинг
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            доставка
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            меню
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -275,10 +409,107 @@
 </main>
 
 
+<!-- basic form popup -->
+<div class="popup" id="basicForm">
+    <div class="popup__body">
+        <button type="button" class="popup__body__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <h2 class="text-center font-forum text-uppercase">
+            чтобы оставить заявкУ, пожалуйста, заполните форму
+        </h2>
+
+
+        <form>
+            <div class="block-form__content__field">
+                <input type="text" placeholder="Введите Ваше имя">
+            </div>
+
+            <div class="block-form__content__field">
+                <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
+            </div>
+
+            <button type="submit" class="book__content__form__content__fields__button">
+                оставить заявку
+            </button>
+
+            <p class="book__content__form__content__privacy-policy">
+                Нажимая на кнопку, вы соглашаетесь
+                <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
+            </p>
+        </form>
+    </div>
+</div>
+
+<div class="mob-menu-wrap">
+    <div class="mob-menu">
+        <button type="button" class="mob-menu__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <a href="/" class="mob-menu__logo">
+            <img src="img/logo-black.svg" alt="">
+        </a>
+
+
+        <div class="mob-menu__phone">
+            <a href="#">
+                8 800 000 00 00
+            </a>
+        </div>
+
+        <ul class="mob-menu__list">
+            <li>
+                <a href="#">
+                    Главная
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Доставка
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    аренда зала
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    аренда ресторана
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    коворкинг
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    контакты
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js" integrity="sha512-EqofP+sBEn/OWcyAINAUnewpwC0e9zc0GvyiVeE3qeHYxqtdCcNocVBUiZhGWbPFWGTWxfJ60CcOK6HQ6G7uiw==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" integrity="sha512-gDBgGPXSeC2hx1W3S1CfSHbAValtLI8OArTGf0UVX7Fwb9Ak7HUE3LK9UEZxKGYVrIe0CJUVZDk9B2dIPwJ6VQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -531,13 +531,14 @@
                         Забронировать ресторан
                     </h2>
 
-                    <form>
+                    <form class="form-name-and-phone">
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите Ваше имя">
+                            <input type="text" placeholder="Введите Ваше имя" class="name" >
                         </div>
 
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите номер телефона">
+                            <input type="tel" placeholder="Введите номер телефона" name="phone" required
+                                   class="masked-input">
                         </div>
 
                         <button type="submit" class="book__content__form__content__fields__button">
@@ -747,7 +748,7 @@
             </div>
 
             <div class="block-form__content__field">
-                <input type="text" placeholder="Введите номер телефона">
+                <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
             </div>
 
             <button type="submit" class="book__content__form__content__fields__button">

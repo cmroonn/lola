@@ -24,8 +24,10 @@ $(document).ready(function() {
     $('.book__content__form__content__order').jScrollPane();
 
     $('.gallery__content').lightGallery();
+    $('.catalog__body__items__item__preview').lightGallery();
 
-    $('.info-block__carousel').slick({
+
+    $('.info-block__carousel, .article__content__carousel').slick({
         nextArrow: `<button type="button">
                         <svg width="51" height="19" viewBox="0 0 51 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.5 9.5H50.5M50.5 9.5L41.9141 1M50.5 9.5L41.9141 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -33,6 +35,23 @@ $(document).ready(function() {
                      </button>`,
         dots: true,
     });
+
+    $('.delivery__catalog__prods__item__preview').slick({
+        nextArrow: `<button type="button" class="arrow-next">
+<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.6" d="M1 1L5 5L1 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+</button>`,
+        prevArrow: `<button class="arrow-prev">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.6" d="M5 1L1 5L5 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+        </button>
+         `,
+        dots: true,
+    });
+
+
 
     console.log($('.restaurant-schema__place'));
 
@@ -112,7 +131,76 @@ $(document).ready(function() {
                 required: 'Пожалуйста, введите свой номер телефона',
             }
         }
-
     });
+
+    $('#basicForm form').validate({
+        rules: {
+            phone: {
+                required: true,
+                minlength: 17,
+            },
+        },
+        messages: {
+            phone: {
+                required: 'Пожалуйста, введите свой номер телефона',
+            }
+        }
+    });
+
+    $('.delivery-page__block-form__form').validate({
+        rules: {
+            phone: {
+                required: true,
+                minlength: 17,
+            },
+        },
+        messages: {
+            phone: {
+                required: 'Пожалуйста, введите свой номер телефона',
+            }
+        }
+    });
+
+
+    $('input').blur(function() {
+        console.log($(this).val());
+
+        if ($(this).val() === '') {
+            setTimeout($(this).removeClass("valid"), 1000);
+        }
+    })
+
+
+    function getCoords(elem) {
+        var box = elem[0].getBoundingClientRect();
+
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+
+    }
+
+    if (window.innerWidth >= 1090) {
+        $('.delivery__catalog__prods__item__content__informer').mouseover(function() {
+            var coords = getCoords($(this));
+
+            $('#informer').css('top', coords.top);
+            $('#informer').css('left', coords.left);
+            $('#informer').addClass('show')
+        });
+
+        $('#informer').mouseleave(function(event) {
+            $('#informer').removeClass('show');
+
+        });
+    } else {
+        $('.delivery__catalog__prods__item__content__informer').click(function() {
+            $('#informer').addClass("active");
+            $('body').css('overflow', 'hidden');
+        });
+    }
+
+
 
 });
