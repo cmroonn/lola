@@ -8,7 +8,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" integrity="sha512-qVGZo16kFUROlnuSNN+j0oxMYHIRBjpnsjXl6Iz/pNR9nTU9WISq5eGODr1Qn0Fz8lzZPxu9i4RVaeof8xVZRA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css" integrity="sha512-gk6oCFFexhboh5r/6fov3zqTCA2plJ+uIoUx941tQSFg6TNYahuvh1esZVV0kkK+i5Kl74jPmNJTTaHAovWIhw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <!-- Main wrapper -->
@@ -68,7 +70,7 @@
                                 8 800 000 00 00
                             </a>
 
-                            <button type="button">
+                            <button type="button" class="header__action__order-call">
                                 Заказать звонок
                             </button>
                         </div>
@@ -102,6 +104,16 @@
                 <path opacity="0.4" d="M39 1L20 17L1 1" stroke="white"/>
             </svg>
         </button>
+
+        <div class="main-screen__scroll-down-desk">
+            <svg width="64" height="10" viewBox="0 0 64 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M63.25 4.75L0.75 4.75M0.75 4.75L4.75 8.75M0.75 4.75L4.75 0.75" stroke="white"/>
+            </svg>
+
+            <p>
+                Листайте вниз
+            </p>
+        </div>
     </section>
 
 
@@ -114,18 +126,26 @@
                         <div class="info-block__carousel__item">
                             <img src="img/info-block-photo.png" alt="">
                         </div>
+
+                        <div class="info-block__carousel__item">
+                            <img src="img/info-block-photo.png" alt="">
+                        </div>
+
+                        <div class="info-block__carousel__item">
+                            <img src="img/info-block-photo.png" alt="">
+                        </div>
                     </div>
 
                     <div class="info-block__content">
-                        <h3 class="font-forum">
-                            Аренда зала
-                        </h3>
+                        <div class="info-block__content-wrap">
+                            <h3 class="font-forum">
+                                Аренда зала
+                            </h3>
 
-                        <p class="fw-300">
-                            Центральный персонаж меню LOLA Pizza&Bar – актуальный гастрономический тренд, римская пицца на воздушном тесте с большим количеством начинки. Она представлена девятью видами в двух размерах от классических «4 сыра» или «Груша, сыр Монте Блун, трюфельная паста» до легкой «Креветки, авокадо, руккола» и пряной «Шпек, красный лук, томаты». Но LOLA Pizza&Bar не только про пиццу! Здесь также большой выбор закусок к вину и свежих салатов, а паста выделена в отдельный блок, где традиционные спагетти с томатами и базиликом или тальятелле с рагу из кролика соседствуют с двумя видами домашних ньокки. Горячие блюда на гриле – это четыре позиции на основе мяса и птицы или рыбы и морепродуктов. На десерт – традиционные средиземноморские сочетания вкусов: фисташковый бисквит с малиной, чизкейк с кремом лимон-базилик и меренгой и апельсиновый бисквит с горьким шоколадом. Совсем скоро появятся и завтраки!
-                        </p>
-
-
+                            <p class="fw-300">
+                                Центральный персонаж меню LOLA Pizza&Bar – актуальный гастрономический тренд, римская пицца на воздушном тесте с большим количеством начинки. Она представлена девятью видами в двух размерах от классических «4 сыра» или «Груша, сыр Монте Блун, трюфельная паста» до легкой «Креветки, авокадо, руккола» и пряной «Шпек, красный лук, томаты». Но LOLA Pizza&Bar не только про пиццу! Здесь также большой выбор закусок к вину и свежих салатов, а паста выделена в отдельный блок, где традиционные спагетти с томатами и базиликом или тальятелле с рагу из кролика соседствуют с двумя видами домашних ньокки. Горячие блюда на гриле – это четыре позиции на основе мяса и птицы или рыбы и морепродуктов. На десерт – традиционные средиземноморские сочетания вкусов: фисташковый бисквит с малиной, чизкейк с кремом лимон-базилик и меренгой и апельсиновый бисквит с горьким шоколадом. Совсем скоро появятся и завтраки!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,53 +160,124 @@
             </h2>
 
             <div class="events__content">
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        Тренинги
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/training.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Тренинги
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
 
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        Конференции
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/conference.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Конференции
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
 
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        выступления
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/perfomance.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Выступления
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
 
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        обучение
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/bday.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Дни рождения
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
 
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        награждения
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/awards.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Награждения
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
 
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        закрытые встречи
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/teach.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Обучение
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
 
-                <div class="events__content__item" style="background-image: linear-gradient(180deg,
-                rgba(40, 35, 35, 0) 32.5%, #282323 100%), url('img/wedding.png') ;">
-                    <p class="font-forum">
-                        праздники
-                    </p>
+                <div class="events__content__item" style="background-image: url('img/work.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Бизнес мероприятия
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
+                </div>
+
+                <div class="events__content__item" style="background-image: url('img/close-meeting.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Закрытые встречи
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
+                </div>
+
+                <div class="events__content__item" style="background-image: url('img/holidays.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            Праздники
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
+                </div>
+
+                <div class="events__content__item" style="background-image: url('img/more-events.png') ;">
+                    <div class="events__content__item-wrap">
+                        <p class="font-forum">
+                            И не только..
+                        </p>
+
+                        <span>
+                            Узнать подробнее
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -298,35 +389,42 @@
             <div class="rate__content">
                 <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        от 20 человек
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            мероприятие до 50 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 1500 руб.
+                        </span>
+                    </div>
                 </div>
 
                 <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        до 65 человек
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            Мероприятие
+                            до 150 человек
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 300 000 руб.
+                        </span>
+                    </div>
                 </div>
 
                 <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
                  13.52%, #282323 100%), url('img/info-block-photo.png');">
-                    <p>
-                        от 150 человек
-                    </p>
+                    <div class="rate__content__item-wrap">
+                        <p>
+                            полное закрытие
+                        </p>
 
-                    <span>
-                        От 1500 руб.
-                    </span>
+                        <span>
+                            От 1500 руб.
+                        </span>
+                    </div>
                 </div>
 
             </div>
@@ -343,13 +441,13 @@
                         Расчет стоимости аренды
                     </h2>
 
-                    <form>
+                    <form class="form-name-and-phone">
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите Ваше имя">
+                            <input type="text" placeholder="Введите Ваше имя" name="name">
                         </div>
 
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите номер телефона">
+                            <input type="tel" placeholder="Введите номер телефона" name="phone" class="masked-input">
                         </div>
 
                         <button type="submit" class="book__content__form__content__fields__button">
@@ -410,6 +508,9 @@
                 проложить маршрут
             </a>
         </div>
+
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7456213c8380194ee6e567ea1cca11ef3a6bfa61a21867c6ceb58c7be491d9d7&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
     </section>
 
 
@@ -537,11 +638,109 @@
     </footer>
 </main>
 
+<!-- basic form popup -->
+<div class="popup" id="basicForm">
+    <div class="popup__body">
+        <button type="button" class="popup__body__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <h2 class="text-center font-forum text-uppercase">
+            чтобы оставить заявкУ, пожалуйста, заполните форму
+        </h2>
+
+
+        <form>
+            <div class="block-form__content__field">
+                <input type="text" placeholder="Введите Ваше имя">
+            </div>
+
+            <div class="block-form__content__field">
+                <input type="text" placeholder="Введите номер телефона">
+            </div>
+
+            <button type="submit" class="book__content__form__content__fields__button">
+                оставить заявку
+            </button>
+
+            <p class="book__content__form__content__privacy-policy">
+                Нажимая на кнопку, вы соглашаетесь
+                <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
+            </p>
+        </form>
+    </div>
+</div>
+
+<div class="mob-menu-wrap">
+    <div class="mob-menu">
+        <button type="button" class="mob-menu__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <a href="/" class="mob-menu__logo">
+            <img src="img/logo-black.svg" alt="">
+        </a>
+
+
+        <div class="mob-menu__phone">
+            <a href="#">
+                8 800 000 00 00
+            </a>
+        </div>
+
+        <ul class="mob-menu__list">
+            <li>
+                <a href="#">
+                    Главная
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Доставка
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    аренда зала
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    аренда ресторана
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    коворкинг
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    контакты
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js" integrity="sha512-EqofP+sBEn/OWcyAINAUnewpwC0e9zc0GvyiVeE3qeHYxqtdCcNocVBUiZhGWbPFWGTWxfJ60CcOK6HQ6G7uiw==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" integrity="sha512-gDBgGPXSeC2hx1W3S1CfSHbAValtLI8OArTGf0UVX7Fwb9Ak7HUE3LK9UEZxKGYVrIe0CJUVZDk9B2dIPwJ6VQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
