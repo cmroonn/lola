@@ -89,6 +89,23 @@
 
    <section class="catalog">
        <div class="catalog__heading">
+           <div class="breadcrumbs catalog-page__breadcrumbs">
+               <div class="container">
+                   <ul class="breadcrumbs__nav breadcrumbs__nav-white">
+                       <li>
+                           <a href="/">
+                               Главная
+                           </a>
+                       </li>
+
+                       <li>
+                           <a href="/">
+                               Статья
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
            <div class="container">
                <div class="catalog__heading__img" style="background-image: url('img/pic2.png');"></div>
            </div>
@@ -306,13 +323,13 @@
                         заявка шеф-повару
                     </h2>
 
-                    <form>
+                    <form class="form-name-and-phone">
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите Ваше имя">
+                            <input type="text" placeholder="Введите Ваше имя" name="name">
                         </div>
 
                         <div class="block-form__content__field">
-                            <input type="text" placeholder="Введите номер телефона">
+                            <input type="tel" placeholder="Введите номер телефона" name="phone">
                         </div>
 
                         <button type="submit" class="book__content__form__content__fields__button">
@@ -453,6 +470,115 @@
         </div>
     </footer>
 </main>
+
+<!-- success order popup -->
+<div class="popup popup-informer" id="informer">
+    <div class="popup-informer__icon">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+                <circle cx="25" cy="23" r="15" fill="white"/>
+                <circle cx="25" cy="23" r="14.5" stroke="#E6E6E6"/>
+            </g>
+            <path opacity="0.3" d="M25 23V30" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity="0.3" d="M25 17V18" stroke="#252525" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+                <filter id="filter0_d" x="0" y="0" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                    <feOffset dy="2"/>
+                    <feGaussianBlur stdDeviation="5"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <div class="popup__body">
+        <button type="button" class="popup__body__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <h2 class="text-center font-forum text-uppercase">
+            пицца lola
+        </h2>
+
+        <div class="popup-informer__block">
+            <h3 class="text-center font-forum text-uppercase">
+                состав:
+            </h3>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+        </div>
+
+        <div class="popup-informer__block">
+            <h3 class="text-center font-forum text-uppercase">
+                Всякое:
+            </h3>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+            <div class="popup-informer__block__row">
+                <p>
+                    Ингридиент
+                </p>
+
+                <span>
+                    100 г
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

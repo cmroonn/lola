@@ -76,7 +76,14 @@ $(document).ready(function() {
                 <span data-choosen='${placesArray[placesArray.length - 1]}' class="chosen-place">${placesArray[placesArray.length - 1]},</span>
                 `;
 
-            document.querySelector('.book__content__form__content__order .jspPane').innerHTML += `
+            if (document.querySelector('.coworking__book__content__form__content__order .jspPane')) {
+                document.querySelector('.coworking__book__content__form__content__order .jspPane').innerHTML += `
+                <p data-choosen="${place}" class="chosen-place">Место №${placesArray[placesArray.length - 1]}</p>
+             `;
+            }
+
+            if (document.querySelector('.restaurant__book__content__form__content__order .jspPane'))
+            document.querySelector('.restaurant__book__content__form__content__order .jspPane').innerHTML += `
                 <p data-choosen="${place}" class="chosen-place">Столик №${placesArray[placesArray.length - 1]}</p>
              `;
 
@@ -117,7 +124,7 @@ $(document).ready(function() {
     });
 
 
-    $('.masked-input').mask("+7(999) 999-99-99");
+    $('.masked-input').mask("+9(999) 999-99-99");
 
     $('.form-name-and-phone').validate({
         rules: {
@@ -178,15 +185,14 @@ $(document).ready(function() {
             top: box.top + pageYOffset,
             left: box.left + pageXOffset
         };
-
     }
 
     if (window.innerWidth >= 1090) {
-        $('.delivery__catalog__prods__item__content__informer').mouseover(function() {
+        $('.delivery__catalog__prods__item__content__informer, .catalog__body__items__item__informer').mouseover(function() {
             var coords = getCoords($(this));
 
-            $('#informer').css('top', coords.top);
-            $('#informer').css('left', coords.left);
+            $('#informer').css('top', coords.top + 5);
+            $('#informer').css('left', coords.left + 5);
             $('#informer').addClass('show')
         });
 
@@ -201,6 +207,38 @@ $(document).ready(function() {
         });
     }
 
+    if (window.innerWidth >= 1090) {
+        $('.catalog__body__items__item__informer').mouseover(function() {
+            var coords = getCoords($(this));
+
+            $('#informer').css('top', coords.top + 8);
+            $('#informer').css('left', coords.left + 7);
+            $('#informer').addClass('show')
+        });
+
+        $('#informer').mouseleave(function(event) {
+            $('#informer').removeClass('show');
+
+        });
+    } else {
+        $('.catalog__body__items__item__informer').click(function() {
+            $('#informer').addClass("active");
+            $('body').css('overflow', 'hidden');
+        });
+    }
+
+
+    $('.stock__nav button').click(function() {
+        $('.stock__nav button').removeClass('active');
+        $(this).addClass('active');
+        var dataStock = $(this).attr('data-stock');
+        $('.stock__content').removeClass("show");
+        $('.stock__content').each(function(i, el) {
+            if ($(el).attr('data-stock') === dataStock) {
+                $(el).addClass('show');
+            }
+        });
+    });
 
 
 });

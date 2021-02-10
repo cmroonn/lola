@@ -87,6 +87,24 @@
             </div>
         </header>
 
+        <div class="breadcrumbs basic-breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__nav breadcrumbs__nav-white">
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
 
         <div class="main-screen__content">
             <div class="main-screen__logo">
@@ -320,7 +338,7 @@
         </div>
     </section>
 
-    <section class="events">
+    <section class="events about-page__events">
         <div class="container">
             <h2 class="section-title">
                 Проведите свое мероприятие
@@ -406,45 +424,102 @@
             </h2>
 
             <div class="stock__nav">
-                <button type="button" class="active">
+                <button type="button" class="active" data-stock="1">
                     Основное меню
                 </button>
 
-                <button type="button">
+                <button type="button" data-stock="2">
                     Карта <span>бара</span>
                 </button>
 
-                <button type="button">
+                <button type="button" data-stock="3">
                     Винная <span>карта</span>
                 </button>
 
-                <button type="button">
+                <button type="button" data-stock="4">
                     Exclusive
                 </button>
             </div>
 
-            <div class="stock__content">
+            <div class="stock__content show" data-stock="1">
                 <div class="stock__content__item">
-                    <img src="img/menu.png" alt="">
+                    <img src="img/menu-1.png" alt="">
                 </div>
 
                 <div class="stock__content__item">
-                    <img src="img/menu.png" alt="">
+                    <img src="img/menu-2.png" alt="">
                 </div>
 
                 <div class="stock__content__item">
-                    <img src="img/menu.png" alt="">
+                    <img src="img/menu-3.png" alt="">
                 </div>
 
 
                 <div class="stock__content__item">
-                    <img src="img/menu.png" alt="">
+                    <img src="img/menu-4.png" alt="">
+                </div>
+            </div>
+
+            <div class="stock__content" data-stock="2">
+                <div class="stock__content__item">
+                    <img src="img/vino1.png" alt="">
+                </div>
+
+                <div class="stock__content__item">
+                    <img src="img/vino2.png" alt="">
+                </div>
+
+                <div class="stock__content__item">
+                    <img src="img/vino3.png" alt="">
+                </div>
+
+
+                <div class="stock__content__item">
+                    <img src="img/vino4.png" alt="">
+                </div>
+            </div>
+
+            <div class="stock__content" data-stock="3">
+                <div class="stock__content__item">
+                    <img src="img/bar1.png" alt="">
+                </div>
+
+                <div class="stock__content__item">
+                    <img src="img/bar2.png" alt="">
+                </div>
+
+                <div class="stock__content__item">
+                    <img src="img/bar3.png" alt="">
+                </div>
+
+
+                <div class="stock__content__item">
+                    <img src="img/bar4.png" alt="">
+                </div>
+            </div>
+
+            <div class="stock__content" data-stock="4">
+                <div class="stock__content__item">
+                    <img src="img/ex1.png" alt="">
+                </div>
+
+                <div class="stock__content__item">
+                    <img src="img/ex2.png" alt="">
+                </div>
+
+                <div class="stock__content__item">
+                    <img src="img/ex3.png" alt="">
+                </div>
+
+
+                <div class="stock__content__item">
+                    <img src="img/ex4.png" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="rate">
+    <section class="rate about-page__rate">
         <div class="container">
             <h2 class="section-title">
                 Тарифы
@@ -458,7 +533,7 @@
                             от 20 человек
                         </p>
 
-                        <span>
+                        <span class="rate__content__item-wrap__subtitle">
                             От 1500 руб.
                         </span>
                     </div>
@@ -471,7 +546,7 @@
                             до 65 человек
                         </p>
 
-                        <span>
+                        <span class="rate__content__item-wrap__subtitle">
                             От 2500 руб.
                         </span>
                     </div>
@@ -484,7 +559,7 @@
                             от 150 человек
                         </p>
 
-                        <span>
+                        <span class="rate__content__item-wrap__subtitle">
                             От 1500 руб.
                         </span>
                     </div>
@@ -497,21 +572,21 @@
                             кофе брейк
                         </p>
 
-                        <span>
+                        <span class="rate__content__item-wrap__subtitle">
                             От 1500 руб.
                         </span>
                     </div>
                 </div>
 
                 <div class="rate__content__item" style="background-image: linear-gradient(180deg, rgba(40, 35, 35, 0)
-                 13.52%, #282323 100%), url('img/info-block-photo.png');">
+                 13.52%, #282323 100%), url('img/pic7.png');">
                     <div class="rate__content__item-wrap">
                         <p>
-                            аренда ресторана
+                            аренда помещения
                         </p>
 
-                        <span>
-                            От 1500 руб.
+                        <span class="rate__content__item-wrap__subtitle">
+                            От 15 000 руб/час
                         </span>
                     </div>
                 </div>
