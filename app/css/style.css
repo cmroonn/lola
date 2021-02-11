@@ -3705,3 +3705,63 @@ p.footer__bottom__created {
     -webkit-transition: .2s ease;
     -o-transition: .2s ease;
     transition: .2s ease; }
+
+.popup-product .popup__body {
+  padding: 0; }
+
+.popup-product__head__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7px; }
+  .popup-product__head__photos a:first-child {
+    grid-column-start: 1;
+    grid-column-end: 5; }
+  .popup-product__head__photos a img {
+    width: 100%; }
+
+.popup-product__head__info {
+  padding: 25px 10px 5px; }
+  .popup-product__head__info h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 8px;
+    text-align: center;
+    font-family: "Forum";
+    font-size: 18px;
+    text-transform: uppercase; }
+
+.popup-product__head__info__gramme {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 8px; }
+  .popup-product__head__info__gramme p {
+    color: rgba(37, 37, 37, 0.6);
+    padding-right: 5px;
+    border-right: 1px solid rgba(37, 37, 37, 0.3);
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 300; }
+    .popup-product__head__info__gramme p:last-child {
+      padding-right: 0;
+      border-right: unset;
+      margin-right: 0; }
+
+.popup-product__head__info__description {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left; }
+
+p.popup-product__head__info__price {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0; }
