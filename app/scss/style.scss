@@ -4233,3 +4233,22 @@ label.error {
     }
   }
 }
+
+
+p.footer__bottom__created {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  opacity: .6;
+  transition: .2s ease;
+  justify-content: center;
+
+  img {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    opacity: 1;
+    transition: .2s ease;
+  }
+}
