@@ -1244,7 +1244,7 @@
                 </label>
 
                 <label class="radio-button">
-                    <input type="radio" name="delivery" checked id="delivery">
+                    <input type="radio" name="delivery" id="delivery">
 
                     <span>
                         Доставка
@@ -1253,17 +1253,17 @@
             </div>
 
             <div class="block-form__content__field">
-                <input type="text" placeholder="Введите город">
+                <input type="text" placeholder="Введите город" name="city">
             </div>
 
-            <div class="popup-ordering__form__delivery-fields">
+            <div class="popup-ordering__form__delivery-fields" style="display: none;">
                 <div class="block-form__content__field">
-                    <input type="text" placeholder="Введите улицу">
+                    <input type="text" placeholder="Введите улицу" name="street">
                 </div>
 
                 <div class="popup-ordering__form__delivery-fields__two-fields">
                     <div class="block-form__content__field">
-                        <input type="text" placeholder="Введите дом">
+                        <input type="text" placeholder="Введите дом" name="house">
                     </div>
 
                     <div class="block-form__content__field">
@@ -1345,7 +1345,7 @@
             </div>
 
             <div class="block-form__content__field">
-                <input type="text" placeholder="Введите номер телефона">
+                <input type="tel" placeholder="Введите номер телефона" class="masked-input" name="phone">
             </div>
 
             <div class="block-form__content__field">
@@ -1377,7 +1377,7 @@
 </div>
 
 
-<!-- success order popup -->
+<!-- informer -->
 <div class="popup popup-informer" id="informer">
     <div class="popup-informer__icon">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">

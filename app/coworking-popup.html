@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" integrity="sha512-qVGZo16kFUROlnuSNN+j0oxMYHIRBjpnsjXl6Iz/pNR9nTU9WISq5eGODr1Qn0Fz8lzZPxu9i4RVaeof8xVZRA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css" integrity="sha512-gk6oCFFexhboh5r/6fov3zqTCA2plJ+uIoUx941tQSFg6TNYahuvh1esZVV0kkK+i5Kl74jPmNJTTaHAovWIhw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<!-- rent coworking popup -->
+<div class="popup active" id="rentCoworking">
+    <div class="popup__body">
+        <button type="button" class="popup__body__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M1 1L15 15M15 1L1 15" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <h2 class="text-center font-forum text-uppercase">
+            Спасибо!
+            <br>
+            Ваша заявка принята!
+        </h2>
+
+        <p>
+            Давайте уточним некоторые данные:
+        </p>
+
+
+        <form>
+            <div class="popup__body__select-wrap">
+                <label class="input-wrap">
+                    <select class="basic-select">
+                        <option value="11.02.2021">
+                            11.02.2021
+                        </option>
+
+                        <option value="12.02.2021">
+                            12.02.2021
+                        </option>
+
+                        <option value="13.02.2021">
+                            13.02.2021
+                        </option>
+
+                        <option value="14.02.2021">
+                            14.02.2021
+                        </option>
+
+                        <option value="15.02.2021">
+                            15.02.2021
+                        </option>
+                    </select>
+
+                    <span>
+                        Выберите дату
+                    </span>
+                </label>
+
+                <label class="input-wrap">
+                    <select class="basic-select">
+                        <option value="12:00">
+                            12:00
+                        </option>
+
+                        <option value="13:00">
+                            13:00
+                        </option>
+
+                        <option value="14:00">
+                            14:00
+                        </option>
+
+                        <option value="15:00">
+                            15:00
+                        </option>
+
+                        <option value="16:00">
+                            16:00
+                        </option>
+                    </select>
+
+                    <span>
+                        Выберите время
+                    </span>
+                </label>
+            </div>
+
+
+            <p class="text-center" style="color: rgba(37, 37, 37, .8);">
+                Рассматриваете ли долгосрочное бронирование?
+            </p>
+
+            <div class="popup__body__radio-wrap">
+
+                <label class="radio-button">
+                    <input type="radio" name="long-term-booking" checked>
+
+                    <span>
+                        Да
+                    </span>
+                </label>
+
+                <label class="radio-button">
+                    <input type="radio" name="long-term-booking">
+
+                    <span>
+                        Нет
+                    </span>
+                </label>
+
+
+            </div>
+
+            <button type="submit" class="book__content__form__content__fields__button">
+                отправить данные
+            </button>
+
+            <p class="book__content__form__content__privacy-policy">
+                Нажимая на кнопку, вы соглашаетесь
+                <span style="display: inline-block;">с <a href="#">Политикой конфиденциальности</a></span>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js" integrity="sha512-EqofP+sBEn/OWcyAINAUnewpwC0e9zc0GvyiVeE3qeHYxqtdCcNocVBUiZhGWbPFWGTWxfJ60CcOK6HQ6G7uiw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" integrity="sha512-gDBgGPXSeC2hx1W3S1CfSHbAValtLI8OArTGf0UVX7Fwb9Ak7HUE3LK9UEZxKGYVrIe0CJUVZDk9B2dIPwJ6VQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

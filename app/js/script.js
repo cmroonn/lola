@@ -25,6 +25,7 @@ $(document).ready(function() {
 
     $('.gallery__content').lightGallery();
     $('.catalog__body__items__item__preview').lightGallery();
+    $('.popup-product__head__photos').lightGallery();
 
 
     $('.info-block__carousel, .article__content__carousel').slick({
@@ -168,6 +169,34 @@ $(document).ready(function() {
         }
     });
 
+    $('#ordering form').validate({
+        rules: {
+            phone: {
+                required: true,
+                minlength: 17,
+            },
+
+            city: {
+                required: true,
+                minlength: 1,
+            },
+
+            street: {
+                required: true,
+                minlength: 1,
+            },
+
+            house: {
+                required: true,
+            }
+        },
+        messages: {
+            phone: {
+                required: 'Пожалуйста, введите свой номер телефона',
+            }
+        }
+    });
+
 
     $('input').blur(function() {
         console.log($(this).val());
@@ -247,6 +276,20 @@ $(document).ready(function() {
             $('.popup').removeClass('active');
             $('body').css('overflow', 'visible');
         }
-    })
+    });
+
+    $('input[name=delivery]').click(function(e) {
+        console.log($(this).attr('id'));
+        if ($(this).attr('id') === 'pickup') {
+            $('.popup-ordering__form__delivery-fields').css('display', 'none');
+        } else {
+            $('.popup-ordering__form__delivery-fields').css('display', 'block');
+
+        }
+    });
+
+    $('.book__content__form__content__fields__button').click(function() {
+        $('#orderSuccess').removeClass('active');
+    });
 
 });
