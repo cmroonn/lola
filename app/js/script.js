@@ -241,4 +241,12 @@ $(document).ready(function() {
     });
 
 
+    $(document).keyup(function(e) {
+        console.log(e.which);
+        if (e.which === 27) {
+            $('.popup').removeClass('active');
+            $('body').css('overflow', 'visible');
+        }
+    })
+
 });
